@@ -1,3 +1,20 @@
 body {
   background-color: black;
 }
+.main-div {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.film-cart {
+  width: 240px;
+  text-align: center;
+  border: 2px grey solid;
+  border-radius: 10px;
+}
+h1 {
+  color: darkkhaki;
+}
+p {
+  color: grey;
+}
