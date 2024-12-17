@@ -14,13 +14,13 @@
 </head>
 
 <body>
-    <div class="app"></div>
+    <div id="app"></div>
     <script type="text/babel">
         const Header = () => {
             return (
                 <>
                     <div className="header">
-                        <h1 id="up">полетели в космос</h1>
+                        <h1>полетели в космос</h1>
                     </div>
                 </>
             )
@@ -63,6 +63,27 @@
                 </div>
             )
         }
+
+        const Footer = () => {
+            return (
+                <div className="footer">
+                    <p>&copy; 2024 Explore the Cosmos. All Rights Reserved.</p>
+                </div>
+            )
+        }
+
+        const AllContent = () => {
+            return (
+                <>
+                    <Header/>
+                    <Main/>
+                    <Footer/>
+                </>
+            )
+
+        }
+
+        ReactDOM.render(<AllContent/>, document.getElementById('app'))
     </script>
 </body>
 
