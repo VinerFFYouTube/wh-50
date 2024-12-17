@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    
+
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    
+
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <link rel="stylesheet" href="style2.css">
 </head>
+
 <body>
     <div class="app"></div>
     <script type="text/babel">
@@ -28,16 +30,40 @@
             return (
                 <div className="main">
                     <div className="sidebar">
-                        <h3>navigation</h3> 
+                        <h3>navigation</h3>
                         <ul>
                             <li><a href="#mercury">mercury</a></li>
                             <li><a href="#venus">venus</a></li>
-                            <li><a href="#earth">earth</a></li>    
-                        </ul>  
-                    </div>    
+                            <li><a href="#earth">earth</a></li>
+                        </ul>
+                    </div>
+
+                    <div className="content">
+                        <Content planet="mercury" img="https://space-facts.com/wp-content/uploads/mercury.png" description="Меркурий — самая близкая к Солнцу планета и самая маленькая в нашей Солнечной системе. Он имеет
+                        очень тонкую атмосферу и
+                        покрыт кратерами."/>
+
+                        <Content planet="venus" img="https://space-facts.com/wp-content/uploads/venus.png" description="Венеру называют близнецом Земли из-за ее схожего размера, но ее поверхность покрыта густыми
+                        облаками серной кислоты."/>
+
+                        <Content planet="earth" img="https://space-facts.com/wp-content/uploads/earth.png" description="Земля — единственная известная планета, на которой поддерживается жизнь. Вода находится во всех
+                        трех состояниях:
+                        твердом, жидком и газообразном."/>
+                    </div>
+                </div>
+            )
+        }
+
+        const Content = ({planet, img, description }) => {
+            return (
+                <div id={planet} className="planet">
+                    <h4>{planet}</h4>
+                    <img src={img} alt={planet} />
+                    <p>{description}</p>
                 </div>
             )
         }
     </script>
 </body>
+
 </html>
